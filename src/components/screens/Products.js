@@ -6,12 +6,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchItem } from "../../store/item";
 import { useEffect } from "react";
 import { filterActions } from "../../store/filter";
-import { cartActions } from "../../store/cart";
 
 export default function Products() {
   const item = useSelector((state) => state.item.item);
   const status = useSelector((state) => state.item.status);
-  const error = useSelector((state) => state.item.error);
   const search = useSelector((state) => state.filter.search);
   const sortType = useSelector((state) => state.filter.sortType);
 
